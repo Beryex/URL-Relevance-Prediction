@@ -18,10 +18,10 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-We implement multiple dataset preprocessing and data mining methods, play with them and find the true relationships between the 10 attributes and the relevance.
+We have implemented multiple dataset preprocessing and data mining methods, experimented with them and tried to find the true relationships between the 10 attributes and the relevance.
 
 ## Results
-For traditional methods, boosting works the best and we record the effect of dataset preprocessing on boosting with optimal hyperparameter.
+For traditional methods, boosting has shown the best results and we have recorded the effect of dataset preprocessing on boosting with the optimal hyperparameters.
 
 | Standardize | Remove Sig5 | Remove Outlier | Kernel Methods | Apply PCA | CV Average Accuracy  | Test Accuracy |
 |-------------|-------------|----------------|----------------|-----------|----------------------|---------------|
@@ -35,11 +35,11 @@ For traditional methods, boosting works the best and we record the effect of dat
 | Yes         | Yes         | Yes            | No             | No        | 66.64                | 67.53         |
 | Yes         | Yes         | No             | Yes            | No        | 66.58                | N/A           |
 
-As observed, removing outliers (despite eliminating only 23 samples in total) resulted in performance declines across all models. We hypothesize that these outliers represent high-leverage extreme cases that are beneficial for the model's fitting. Additionally, using degree-2 kernel methods to add features also led to performance degradation, possibly due to the interference of redundant features with the model's fitting. Similarly, applying PCA did not improve model performance, which we attribute to the loss of original information when the attributes were linearly mapped into an orthogonal feature space.
+We observed that removing outliers (despite eliminating only 23 samples in total) resulted in performance declines across all models. We hypothesize that these outliers represent high-leverage extreme cases that are beneficial for the model's fitting. Additionally, using degree-2 kernel methods to add features also led to performance degradation, possibly due to the interference of redundant features with the model's fitting. Similarly, applying PCA did not improve model performance, which we attribute to the loss of original information when the attributes were linearly mapped into an orthogonal feature space.
 
-Standardizing the data proved to be effective. While not standardizing the data might slightly improve the average cross-validation accuracy in some cases, standardizing clearly yielded better results on the test dataset. Removing sig5 was also beneficial; although it did not significantly affect the average cross-validation accuracy, it slightly improved the test accuracy.
+Standardizing the data proved to be effective for us. While not standardizing the data would slightly improve the average cross-validation accuracy in some cases, standardizing clearly yielded better results on the test dataset. Removing sig5 was also beneficial; although it did not significantly affect the average cross-validation accuracy, it slightly improved the test accuracy.
 
-For deep learning, we also test several models and record their results.
+For deep learning, we also tested several models and recorded their results.
 
 | Model    | Initial Learning Rate | Weight Decay | Total Epoch | Validation Accuracy |
 |----------|-----------------------|--------------|-------------|---------------------|
