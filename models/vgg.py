@@ -1,3 +1,12 @@
+"""
+Implementation of the VGG model, inspired by the architecture proposed in:
+Karen Simonyan, Andrew Zisserman, "Very Deep Convolutional Networks for Large-Scale Image Recognition."
+Paper: https://arxiv.org/abs/1409.1556v6
+
+This implementation is based on the PyTorch replication available at:
+https://github.com/weiaicunzai/pytorch-cifar100/
+"""
+
 import torch
 import torch.nn as nn
 
