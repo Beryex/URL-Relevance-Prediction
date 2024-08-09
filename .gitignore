@@ -2,6 +2,7 @@
 **/wandb/
 **/output_models/
 **/__pycache__/
+**/report/
 *.pth
 *.csv
 *.xlsx
